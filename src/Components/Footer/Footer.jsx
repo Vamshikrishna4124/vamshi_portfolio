@@ -25,11 +25,7 @@ const Footer = () => {
             LinkedIn
           </a>
           <a
-<<<<<<< HEAD
-            href="vamshikrishnagondru@gmail.com"
-=======
             href="mailto:vamshikrishnagondru@gmail.com"
->>>>>>> Updated portfolio with my details
             className="hover:text-white transition-colors"
           >
             Email
