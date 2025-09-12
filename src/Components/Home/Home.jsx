@@ -1,0 +1,455 @@
+import React, { useState } from "react";
+
+const Home = () => {
+  return (
+    <main className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-6 py-16 space-y-32">
+        {/* Hero Section */}
+        <section
+          id="home"
+          className="flex flex-col-reverse md:flex-row items-center gap-12"
+        >
+          <div className="md:w-1/2 text-center md:text-left">
+            <h1 className="text-5xl sm:text-6xl font-extrabold leading-tight mb-6">
+              Hi, I'm <span className="text-indigo-500">Vamshi Krishna Gondru</span>
+            </h1>
+            <p className="text-lg text-gray-300 mb-8">
+              A Java Full Stack Developer crafting web applications
+              using{" "}
+              <span className="text-indigo-400 font-semibold">Spring Boot</span>{" "}
+              and <span className="text-indigo-400 font-semibold">React</span>.
+              Explore my work to see how I bring ideas to life with efficient
+              backend and interactive frontend solutions.
+            </p>
+            <a
+              href="#about"
+              className="inline-block px-6 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-white font-medium transition"
+            >
+              Know More
+            </a>
+          </div>
+          <div className="md:w-1/2 flex justify-center">
+            <img
+              src="/formal.jpg"
+<<<<<<< HEAD
+              alt="Vamshi Krihsna Gondru"
+=======
+              alt="Vamshi Krishna Gondru"
+>>>>>>> Updated portfolio with my details
+              className="rounded-2xl shadow-lg w-full max-w-sm md:max-w-md lg:max-w-lg object-cover"
+            />
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section id="about" className="scroll-mt-24">
+          <h2 className="text-4xl font-bold mb-4">About Me</h2>
+          <p className="text-gray-300 text-lg leading-relaxed">
+            I'm a passionate Java Full Stack Developer with hands-on experience
+            in building complete web applications. I specialize in backend
+            development using Spring Boot and frontend development using React.
+            I enjoy solving real-world problems and building user interfaces
+            that enhance digital experiences.
+          </p>
+        </section>
+
+        {/* Experience Section */}
+        <section id="experience" className="scroll-mt-24">
+          <h2 className="text-4xl font-bold mb-4">Experience</h2>
+          <ul className="space-y-6 text-gray-300">
+            <li>
+              {/* <h3 className="text-2xl font-semibold text-white">
+                Java Full Stack Intern – Edunet Software and Services
+              </h3>
+              <p className="text-sm text-indigo-400">June 2024 – July 2024</p>
+              <p>
+                Learned and applied core Java and Spring Boot fundamentals in a
+                hands-on project environment. Built RESTful APIs using Spring
+                Boot. Gained experience working with frontend tools like React.
+              </p> */}
+            </li>
+          </ul>
+        </section>
+
+        {/* Projects Section */}
+        <section id="projects" className="scroll-mt-24">
+          <h2 className="text-4xl font-bold mb-4">Projects</h2>
+<<<<<<< HEAD
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Project 1 }
+            <div className="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
+              <a
+                href="https://github.com/harshittagaram/CivicReportHub"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <h3 className="text-2xl font-semibold text-indigo-400 mb-2">
+                  Civic Tech Cleanliness Report System
+                </h3>
+              </a>
+              <img
+                src={CivicReport}
+                alt="Civic Tech Cleanliness Report System"
+                className="w-full h-48 object-cover rounded-lg mb-4 cursor-pointer"
+                onClick={() =>
+                  openLightbox(
+                    CivicReport,
+                    "https://github.com/harshittagaram/CivicReportHub",
+                    "Civic Tech Cleanliness Report System Screenshot"
+                  )
+                }
+              />
+              <p className="text-gray-300">
+                Allows users to report environmental issues using photos and
+                location. Admin panel built to manage submissions.
+              </p>
+              <p className="text-sm text-gray-500 mt-2">
+                Stack: React, Spring Boot, MongoDB, AWS S3
+              </p>
+            </div>
+
+            {/* Project 2 }
+            <div className="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
+              <a
+                href="https://github.com/harshittagaram/Feed-Me-Food-Delivery-App"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block BUFFER"
+              >
+                <h3 className="text-2xl font-semibold text-indigo-400 mb-2">
+                  Food Delivery App
+                </h3>
+              </a>
+              <img
+                src={FoodDelivery}
+                alt="Food Delivery App"
+                className="w-full h-48 object-cover rounded-lg mb-4 cursor-pointer"
+                onClick={() =>
+                  openLightbox(
+                    FoodDelivery,
+                    "https://github.com/harshittagaram/Feed-Me-Food-Delivery-App",
+                    "Food Delivery App Screenshot"
+                  )
+                }
+              />
+              <p className="text-gray-300">
+                Built a full-stack app for placing food orders with admin-side
+                controls and S3 file uploads.
+              </p>
+              <p className="text-sm text-gray-500 mt-2">
+                Stack: React, Spring Boot, MySQL, AWS
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Lightbox Modal }
+        {isLightboxOpen && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+            onClick={closeLightbox}
+          >
+            <div className="relative max-w-4xl w-full flex flex-col items-center">
+              <img
+                src={selectedImage.image}
+                alt={selectedImage.alt}
+                className="w-full h-auto rounded-lg"
+              />
+              <a
+                href={selectedImage.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-white font-medium transition"
+              >
+                View on GitHub
+              </a>
+              <button
+                className="absolute top-2 right-2 text-white bg-gray-800 rounded-full p-2 hover:bg-gray-700"
+                onClick={closeLightbox}
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+        )}
+
+=======
+          <p className="text-gray-400">Coming soon...</p>
+        </section>
+
+>>>>>>> Updated portfolio with my details
+        {/* Education Section */}
+        <section id="education" className="scroll-mt-24">
+          <h2 className="text-4xl font-bold mb-4">Education</h2>
+          <ul className="space-y-6 text-gray-300">
+            <li>
+              <h3 className="text-2xl font-semibold text-white">
+<<<<<<< HEAD
+                B.Tech in Electrical and Electronics Engineering – Gokaraju Rangaraju Institute of Engineering & Technology
+=======
+                B.Tech in Electronics and Electronics Engineering – Gokaraju Rangaraju Institute of Engineering and Technology
+>>>>>>> Updated portfolio with my details
+              </h3>
+              <p className="text-sm text-indigo-400">2022 – 2026</p>
+            </li>
+            <li>
+              <h3 className="text-2xl font-semibold text-white">
+<<<<<<< HEAD
+                Class 12th – Excel jr. clg - Hyderabad
+=======
+                Class 12th – Excel.jr College - Hyderabad
+>>>>>>> Updated portfolio with my details
+              </h3>
+              <p className="text-sm text-indigo-400">2020 – 2022</p>
+            </li>
+            <li>
+              <h3 className="text-2xl font-semibold text-white">
+                Class 10th – CBSE Board, Atomic Energy Central School, Manuguru
+              </h3>
+              <p className="text-sm text-indigo-400">2011 – 2020</p>
+            </li>
+          </ul>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="scroll-mt-24">
+          <h2 className="text-4xl font-bold mb-4 text-white">Contact Me</h2>
+          <p className="text-lg text-gray-300 mb-6">
+            Have a project in mind or want to collaborate? Drop me a message!
+          </p>
+
+          <form
+            onSubmit={async (e) => {
+              e.preventDefault();
+              const formData = new FormData(e.target);
+
+              try {
+                const response = await fetch("https://formspree.io/f/xdkgbbkv", {
+                  method: "POST",
+                  body: formData,
+                  headers: {
+                    Accept: "application/json",
+                  },
+                });
+
+                if (response.ok) {
+                  e.target.reset();
+                  alert("Message sent successfully!");
+                } else {
+                  alert("There was an error sending your message. Please try again.");
+                }
+              } catch (error) {
+                alert("There was an error sending your message. Please try again.");
+              }
+            }}
+            className="space-y-6 max-w-xl"
+          >
+            <div>
+              <label htmlFor="name" className="block text-gray-400 mb-1">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="email" className="block text-gray-400 mb-1">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="message" className="block text-gray-400 mb-1">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full px-6 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-white font-medium transition"
+            >
+              Send Message
+            </button>
+          </form>
+
+          <div className="mt-8 text-gray-400 space-y-1">
+            <p>
+              Email:{" "}
+              <a
+<<<<<<< HEAD
+                href="vamshikrishnagondru@gmail.com"
+=======
+                href="mailto:vamshikrishnagondru@gmail.com"
+>>>>>>> Updated portfolio with my details
+                className="text-blue-400 underline"
+              >
+                vamshikrishnagondru@gmail.com
+              </a>
+            </p>
+            <p>
+              LinkedIn:{" "}
+              <a
+                href="https://www.linkedin.com/in/vamshi-krishna-gondru-1770692b4/"
+                className="text-blue-400 underline"
+              >
+<<<<<<< HEAD
+                linkedin.com/in/vamshikrishnagondru
+=======
+                linkedin.com/in/vamshi-krishna-gondru
+>>>>>>> Updated portfolio with my details
+              </a>
+            </p>
+            <p>
+              GitHub:{" "}
+              <a
+                href="https://github.com/Vamshikrishna4124"
+                className="text-blue-400 underline"
+              >
+<<<<<<< HEAD
+                github.com/vamshikrishnagondru
+=======
+                github.com/Vamshikrishna4124
+>>>>>>> Updated portfolio with my details
+              </a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+  );
+<<<<<<< HEAD
+};<section id="contact" className="scroll-mt-24">
+  <h2 className="text-4xl font-bold mb-4 text-white">Contact Me</h2>
+  <p className="text-lg text-gray-300 mb-6">
+    Have a project in mind or want to collaborate? Drop me a message!
+  </p>
+
+  <form
+    onSubmit={async (e) => {
+      e.preventDefault(); // Prevent default form submission (page redirect)
+      const formData = new FormData(e.target);
+
+      try {
+        const response = await fetch("https://formspree.io/f/xdkgbbkv", {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (response.ok) {
+          // Clear the form fields on successful submission
+          e.target.reset();
+          alert("Message sent successfully!");
+        } else {
+          alert("There was an error sending your message. Please try again.");
+        }
+      } catch (error) {
+        alert("There was an error sending your message. Please try again.");
+      }
+    }}
+    className="space-y-6 max-w-xl"
+  >
+    <div>
+      <label htmlFor="name" className="block text-gray-400 mb-1">
+        Name
+      </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      />
+    </div>
+
+    <div>
+      <label htmlFor="email" className="block text-gray-400 mb-1">
+        Email
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      />
+    </div>
+
+    <div>
+      <label htmlFor="message" className="block text-gray-400 mb-1">
+        Message
+      </label>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        required
+        className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      className="w-full px-6 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-white font-medium transition"
+    >
+      Send Message
+    </button>
+  </form>
+
+  <div className="mt-8 text-gray-400 space-y-1">
+    <p>
+      Email:{" "}
+      <a
+        href="vamshikrishnagondru@gmail.com"
+        className="text-blue-400 underline"
+      >
+        vamshikrishnagondru@gmail.com
+      </a>
+    </p>
+    <p>
+      LinkedIn:{" "}
+      <a
+        href="https://www.linkedin.com/in/vamshi-krishna-gondru-1770692b4/"
+        className="text-blue-400 underline"
+      >
+        linkedin.com/in/vamshikrishnagondru
+      </a>
+    </p>
+    <p>
+      GitHub:{" "}
+      <a
+        href="https://github.com/Vamshikrishna4124"
+        className="text-blue-400 underline"
+      >
+        github.com/vamshikrishnagondru
+      </a>
+    </p>
+  </div>
+</section>;
+=======
+};
+>>>>>>> Updated portfolio with my details
+
+export default Home;
