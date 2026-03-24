@@ -71,12 +71,12 @@ const Home = () => {
             </p>
 
             <h1
-              className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 fade-up fade-up-delay-2"
+              className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 fade-up fade-up-delay-2"
               style={{ fontFamily: "'Syne', sans-serif" }}
             >
               Hi, I'm{" "}
-              <span className="gradient-text">
-                Vamshi<br />Krishna
+              <span className="gradient-text block">
+                Vamshi Krishna Gondru
               </span>
             </h1>
 
